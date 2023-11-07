@@ -1,0 +1,140 @@
+.main-div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.child-div {
+    width: 400px;
+    height: max-content;
+    background-color: #f3ebeb;
+    color: #000;
+}
+
+img {
+    width: 80px;
+}
+
+figcaption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+figcaption>img {
+    width: 30px;
+}
+
+.addItems {
+    /* background-color: #e06767; */
+    width: 100%;
+    height: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.4vw;
+}
+
+.addItems>input {
+    padding: 0.7vw;
+    width: 18vw;
+    outline: none;
+    border-radius: 5px;
+}
+
+#plus {
+    color: rgb(0, 255, 38);
+    position: relative;
+    right: 26px;
+    font-size: 1.5vw;
+}
+
+#plus:active {
+    scale: 0.9;
+}
+
+.showItems {
+    /* background-color: #dada; */
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5vw;
+    flex-direction: column;
+}
+
+.eachItem {
+    background-color: #cec3c3;
+    width: 80%;
+    height: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1vw;
+    border-radius: 20px;
+    margin-block: 0.5vw;
+}
+
+.eachItem>i {
+    color: rgb(255, 0, 238);
+    font-size: 1.5vw;
+}
+
+.eachItem>i:hover {
+    cursor: pointer;
+    color: red;
+}
+
+button::before {
+    content: "CHECK ALL";
+}
+
+button:hover::before {
+    content: "CLEAR ALL";
+
+}
+
+
+@media screen and (max-width: 600px) {
+    .main-div {
+        width: 100%;
+        height: auto;
+        /* Change as needed */
+    }
+
+    .child-div {
+        /* Update styles for .child-div on screens with a width of 600px */
+        width: 100%;
+        /* Adjust the width to fill the screen width */
+        height: auto;
+        /* Change to 'auto' for better responsiveness */
+    }
+
+    .addItems {
+        /* Update styles for .addItems on smaller screens */
+        height: auto;
+        /* Change to 'auto' for better responsiveness */
+        margin-bottom: 0.2vw;
+        /* Adjust margin as needed */
+    }
+
+    .addItems>input {
+        /* Update styles for .addItems > input on smaller screens */
+        padding: 0.5vw;
+        /* Adjust padding as needed */
+        width: 90%;
+        /* Make the input width responsive to the screen width */
+    }
+
+    #plus {
+        /* Update styles for #plus on screens with a width of 600px */
+        right: 10px;
+        /* Adjust the right position as needed */
+        font-size: 1vw;
+        /* Adjust the font size as needed */
+    }
+}
